@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "890370395546",
+    "firebase_url": "https://storybookapp-27747.firebaseio.com",
+    "project_id": "storybookapp-27747",
+    "storage_bucket": "storybookapp-27747.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890370395546:android:973b285dea02588c8e3e23",
+        "android_client_info": {
+          "package_name": "com.example.storybookapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890370395546-ftb3qivbbj5ff3abiqjtkfc1h349tske.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.storybookapp",
+            "certificate_hash": "db92d15db6985d880db2b1c8584c30156186c43f"
+          }
+        },
+        {
+          "client_id": "890370395546-r10nfuc1grj0p4utqqsbase3mcgmr8oj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBubeHZ-uidRTNrDSiW6UBksfRiqJI_lFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890370395546-r10nfuc1grj0p4utqqsbase3mcgmr8oj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
