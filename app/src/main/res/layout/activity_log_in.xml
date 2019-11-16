@@ -4,10 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".Activities.LogInActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"/>
+        android:layout_gravity="center"
+        android:textSize="42sp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/app_name"/>
+    <EditText
+        android:id="@+id/log_in_mail"
+        android:hint="@string/email_address"
+        android:textSize="22sp"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/log_in_password"
+        android:hint="@string/password"
+        android:textSize="22sp"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/log_in_button"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="New here ? Do a quick sign Up"
+        android:layout_width="wrap_content"
+        android:textSize="22sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/goto_sign_up_button"
+        android:text="@string/sign_up"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
