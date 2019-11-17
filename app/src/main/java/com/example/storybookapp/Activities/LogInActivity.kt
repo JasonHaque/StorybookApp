@@ -5,16 +5,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.storybookapp.R
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_log_in.*
 
 class LogInActivity : AppCompatActivity() {
-
+    val firebaseAuth:FirebaseAuth= FirebaseAuth.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in)
-        bindListeners()
+        bind()
     }
-    private fun bindListeners(){
+    private fun bind(){
+
         goto_sign_up_button.setOnClickListener {
             val intent=Intent(this,SignUpActivity::class.java)
             startActivity(intent)
@@ -32,6 +34,10 @@ class LogInActivity : AppCompatActivity() {
 
     }
     private fun logIn(email:String,password:String){
-        //Todo:login method with firebase
+        firebaseAuth.signInWithEmailAndPassword(email,password).addOnSuccessListener {
+            Toast.makeText(this,"Success",Toast.LENGTH_LONG).show()
+            return@addOnSuccessListener
+        }
+        return
     }
 }
