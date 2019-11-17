@@ -26,7 +26,12 @@ class LogInActivity : AppCompatActivity() {
                 Toast.makeText(this,"Fill up the fields properly",Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            logIn(email,password)
 
         }
+
+    }
+    private fun logIn(email:String,password:String){
+        //Todo:login method with firebase
     }
 }

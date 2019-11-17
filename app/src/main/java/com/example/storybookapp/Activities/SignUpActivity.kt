@@ -26,7 +26,12 @@ class SignUpActivity : AppCompatActivity() {
                 Toast.makeText(this,"Passwords do not match",Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            signUp(email,password)
         }
 
+
+    }
+    private fun signUp(email:String,password:String){
+        //Todo:implement sign up with firebase
     }
 }
