@@ -1,9 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".Activities.SignUpActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:text="@string/app_name"
+        android:textSize="42sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/sign_up_mail"
+        android:hint="@string/email_address"
+        android:inputType="textEmailAddress"
+        android:textSize="22sp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/sign_up_password"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textSize="22sp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/confirm_password"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        android:textSize="22sp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/sign_up_button"
+        android:layout_gravity="center"
+        android:text="@string/sign_up"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
