@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.storybookapp.R
+import com.example.storybookapp.Views.ProfileView
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_log_in.*
 
@@ -36,6 +37,8 @@ class LogInActivity : AppCompatActivity() {
     private fun logIn(email:String,password:String){
         firebaseAuth.signInWithEmailAndPassword(email,password).addOnSuccessListener {
             Toast.makeText(this,"Success",Toast.LENGTH_LONG).show()
+            val intent=Intent(this,ProfileView::class.java)
+            startActivity(intent)
             return@addOnSuccessListener
         }
         return
