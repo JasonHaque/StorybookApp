@@ -36,6 +36,9 @@ class SignUpActivity : AppCompatActivity() {
         firebaseAuth.createUserWithEmailAndPassword(email,password).addOnSuccessListener {
             Toast.makeText(this,"Success",Toast.LENGTH_LONG).show()
             return@addOnSuccessListener
+        }.addOnFailureListener{
+            Toast.makeText(this, "Failed Signing in $it",Toast.LENGTH_SHORT).show()
+            return@addOnFailureListener
         }
         return
     }

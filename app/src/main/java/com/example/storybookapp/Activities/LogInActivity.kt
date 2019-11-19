@@ -40,6 +40,9 @@ class LogInActivity : AppCompatActivity() {
             val intent=Intent(this,ProfileView::class.java)
             startActivity(intent)
             return@addOnSuccessListener
+        }.addOnFailureListener{
+            Toast.makeText(this, "Failed Logging in $it",Toast.LENGTH_SHORT).show()
+            return@addOnFailureListener
         }
         return
     }
