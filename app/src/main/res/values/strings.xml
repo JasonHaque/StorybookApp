@@ -5,4 +5,5 @@
     <string name="login">Log in</string>
     <string name="sign_up">Sign Up</string>
     <string name="confirm_password">Confirm Password</string>
+    <string name="log_out">Log Out</string>
 </resources>
