@@ -14,5 +14,23 @@
         android:textSize="42sp"
         android:layout_marginBottom="20dp"
         android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/Create_new_story"
+        android:text="@string/create_new_story"
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/Current_Stories"
+        android:text="@string/view_all_your_stories"
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/goto_profile"
+        android:text="@string/go_to_profile"
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

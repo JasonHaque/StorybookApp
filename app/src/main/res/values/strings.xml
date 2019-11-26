@@ -6,4 +6,7 @@
     <string name="sign_up">Sign Up</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="log_out">Log Out</string>
+    <string name="create_new_story">Create new Story</string>
+    <string name="view_all_your_stories">View All your Stories</string>
+    <string name="go_to_profile">Go to Profile</string>
 </resources>
