@@ -1,5 +1,6 @@
 package com.example.storybookapp.Views
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.storybookapp.R
@@ -21,7 +22,8 @@ class HomeView : AppCompatActivity() {
 
         }
         goto_profile.setOnClickListener {
-
+            val intent=Intent(this,ProfileView::class.java)
+            startActivity(intent)
         }
     }
 }
