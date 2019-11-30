@@ -23,6 +23,7 @@ class HomeView : AppCompatActivity() {
         }
         Current_Stories.setOnClickListener {
             val intent=Intent(this,CurrentStoriesActivity::class.java)
+            startActivity(intent)
         }
         goto_profile.setOnClickListener {
             val intent=Intent(this,ProfileView::class.java)
