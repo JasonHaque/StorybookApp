@@ -9,17 +9,24 @@
     tools:context=".Activities.NewStoryActivity">
 
     <EditText
-        android:hint="Name of Story"
+        android:hint="@string/name_of_story"
         android:textSize="30sp"
         android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_marginBottom="20dp"
         android:layout_height="wrap_content"/>
     <EditText
-        android:hint="Story"
+        android:hint="@string/story"
         android:textSize="16sp"
         android:textAlignment="viewStart"
         android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/save_story"
+        android:text="@string/save"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
 

@@ -9,4 +9,7 @@
     <string name="create_new_story">Create new Story</string>
     <string name="view_all_your_stories">View All your Stories</string>
     <string name="go_to_profile">Go to Profile</string>
+    <string name="name_of_story">Name of «Story</string>
+    <string name="story">Story</string>
+    <string name="save">Save</string>
 </resources>
