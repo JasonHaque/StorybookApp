@@ -3,6 +3,8 @@ package com.example.storybookapp.Activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
+import android.view.View
 import android.widget.Toast
 import com.example.storybookapp.R
 import com.example.storybookapp.Views.HomeView
@@ -19,10 +21,31 @@ class LogInActivity : AppCompatActivity() {
     }
     private fun bind(){
 
+        log_in_mail.setOnKeyListener(View.OnKeyListener { view, keyCode, keyevent ->
+            //If the keyevent is a key-down event on the "enter" button
+            if (keyevent.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
+                //...
+                // Perform your action on key press here
+                // ...
+                true
+            } else false
+        })
+
+        log_in_password.setOnKeyListener(View.OnKeyListener { view, keyCode, keyevent ->
+            //If the keyevent is a key-down event on the "enter" button
+            if (keyevent.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
+                //...
+                // Perform your action on key press here
+                // ...
+                true
+            } else false
+        })
+
         goto_sign_up_button.setOnClickListener {
             val intent=Intent(this,SignUpActivity::class.java)
             startActivity(intent)
         }
+
         log_in_button.setOnClickListener {
             val email=log_in_mail.text.toString()
             val password =log_in_password.text.toString()
