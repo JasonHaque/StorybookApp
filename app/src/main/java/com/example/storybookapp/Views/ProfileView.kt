@@ -25,4 +25,12 @@ class ProfileView : AppCompatActivity() {
             startActivity(intent)
         }
     }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this@ProfileView, HomeView::class.java)
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(intent)
+        finish()
+
+    }
 }

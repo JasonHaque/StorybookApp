@@ -1,5 +1,6 @@
 package com.example.storybookapp.Activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -41,5 +42,13 @@ class SignUpActivity : AppCompatActivity() {
             return@addOnFailureListener
         }
         return
+    }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this@SignUpActivity, LogInActivity::class.java)
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(intent)
+        finish()
+
     }
 }
