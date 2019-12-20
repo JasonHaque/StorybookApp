@@ -15,30 +15,54 @@
         android:layout_marginBottom="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-    <EditText
-        android:id="@+id/sign_up_mail"
-        android:hint="@string/email_address"
-        android:inputType="textEmailAddress"
-        android:textSize="22sp"
-        android:layout_marginBottom="16dp"
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <EditText
-        android:id="@+id/sign_up_password"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:textSize="22sp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/sign_up_mail"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
+            android:textSize="22sp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <EditText
-        android:id="@+id/confirm_password"
-        android:hint="@string/confirm_password"
-        android:inputType="textPassword"
-        android:textSize="22sp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/sign_up_password"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textSize="22sp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/confirm_password"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            android:textSize="22sp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/sign_up_button"
         android:layout_gravity="center"
