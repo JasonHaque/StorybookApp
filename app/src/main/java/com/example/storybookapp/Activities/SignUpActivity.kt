@@ -3,9 +3,12 @@ package com.example.storybookapp.Activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
+import android.view.View
 import android.widget.Toast
 import com.example.storybookapp.R
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_log_in.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
@@ -16,6 +19,37 @@ class SignUpActivity : AppCompatActivity() {
         bindListenrs()
     }
     private fun bindListenrs(){
+
+        sign_up_mail.setOnKeyListener(View.OnKeyListener { view, keyCode, keyevent ->
+            //If the keyevent is a key-down event on the "enter" button
+            if (keyevent.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
+                //...
+                // Perform your action on key press here
+                // ...
+                true
+            } else false
+        })
+
+        sign_up_password.setOnKeyListener(View.OnKeyListener { view, keyCode, keyevent ->
+            //If the keyevent is a key-down event on the "enter" button
+            if (keyevent.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
+                //...
+                // Perform your action on key press here
+                // ...
+                true
+            } else false
+        })
+
+        confirm_password.setOnKeyListener(View.OnKeyListener { view, keyCode, keyevent ->
+            //If the keyevent is a key-down event on the "enter" button
+            if (keyevent.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
+                //...
+                // Perform your action on key press here
+                // ...
+                true
+            } else false
+        })
+
         sign_up_button.setOnClickListener {
             val email =sign_up_mail.text.toString()
             val password=sign_up_password.text.toString()
