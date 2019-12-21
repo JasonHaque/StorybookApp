@@ -17,7 +17,8 @@ class NewStoryActivity : AppCompatActivity() {
 
     private fun bindWidgets(){
         save_story.setOnClickListener {
-            //TODO: add listener
+            val StoryName = Name_of_Story.text.toString()
+            val StoryDesc = Story_Description.text.toString()
         }
     }
     override fun onBackPressed() {

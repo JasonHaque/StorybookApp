@@ -9,6 +9,7 @@
     tools:context=".Activities.NewStoryActivity">
 
     <EditText
+        android:id="@+id/Name_of_Story"
         android:hint="@string/name_of_story"
         android:textSize="30sp"
         android:textAlignment="center"
@@ -16,6 +17,7 @@
         android:layout_marginBottom="20dp"
         android:layout_height="wrap_content"/>
     <EditText
+        android:id="@+id/Story_Description"
         android:hint="@string/story"
         android:textSize="16sp"
         android:textAlignment="viewStart"
