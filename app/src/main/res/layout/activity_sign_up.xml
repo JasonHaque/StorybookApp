@@ -18,11 +18,16 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:theme="@style/Customedittext">
 
         <EditText
             android:id="@+id/sign_up_mail"
             android:hint="@string/email_address"
+            android:textColor="#993333"
+            android:textStyle="bold"
+            android:backgroundTint="#993333"
+            android:textCursorDrawable="@null"
             android:inputType="textEmailAddress"
             android:textSize="22sp"
             android:layout_marginBottom="16dp"
@@ -34,12 +39,18 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/Customedittext"
+        app:passwordToggleTint="#993333"
         app:passwordToggleEnabled="true">
 
         <EditText
             android:id="@+id/sign_up_password"
             android:hint="@string/password"
             android:inputType="textPassword"
+            android:textStyle="bold"
+            android:backgroundTint="#993333"
+            android:textCursorDrawable="@null"
+            android:textColor="#993333"
             android:textSize="22sp"
             android:layout_marginBottom="16dp"
             android:layout_width="match_parent"
@@ -50,12 +61,18 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/Customedittext"
+        app:passwordToggleTint="#993333"
         app:passwordToggleEnabled="true">
 
         <EditText
             android:id="@+id/confirm_password"
             android:hint="@string/confirm_password"
             android:inputType="textPassword"
+            android:textColor="#993333"
+            android:textStyle="bold"
+            android:backgroundTint="#993333"
+            android:textCursorDrawable="@null"
             android:textSize="22sp"
             android:layout_marginBottom="16dp"
             android:layout_width="match_parent"
