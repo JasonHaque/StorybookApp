@@ -7,5 +7,10 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="Customedittext" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">#993333</item>
+        <item name="android:colorAccent">#993333</item>
+        <item name="android:colorControlActivated">#993333</item>
+        <item name="android:colorControlNormal">#993333</item>
+    </style>
 </resources>
