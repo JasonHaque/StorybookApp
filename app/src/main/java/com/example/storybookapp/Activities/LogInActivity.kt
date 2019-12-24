@@ -12,12 +12,15 @@ import com.example.storybookapp.Views.ProfileView
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_log_in.*
 
+
 class LogInActivity : AppCompatActivity() {
+    var userID: String = ""
     val firebaseAuth:FirebaseAuth= FirebaseAuth.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in)
         bind()
+        checkUserStatus()
     }
     private fun bind(){
 
@@ -57,6 +60,15 @@ class LogInActivity : AppCompatActivity() {
 
         }
 
+    }
+    private fun checkUserStatus() {
+        if (firebaseAuth.currentUser != null) {
+            val ID = firebaseAuth.currentUser!!.email!!.toString().split("@".toRegex())
+                .dropLastWhile { it.isEmpty() }
+                .toTypedArray()
+             userID = ID[0]
+            startActivity(Intent(this@LogInActivity, HomeView::class.java))
+        }
     }
     private fun logIn(email:String,password:String){
         firebaseAuth.signInWithEmailAndPassword(email,password).addOnSuccessListener {
