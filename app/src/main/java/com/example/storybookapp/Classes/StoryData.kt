@@ -4,6 +4,6 @@ import java.io.Serializable
 
 data class StoryData(
     val authorId:String="",
-    val storynName:String="",
+    val storyName:String="",
     val storyDesc:String=""
 ):Serializable
