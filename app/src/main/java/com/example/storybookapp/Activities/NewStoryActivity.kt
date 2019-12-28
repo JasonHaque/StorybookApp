@@ -31,7 +31,7 @@ class NewStoryActivity : AppCompatActivity() {
             }
             val storyData =StoryData(FirebaseAuth.getInstance().currentUser?.uid.toString(),StoryName,StoryDesc)
             db.child("Users").child("Stories")
-                .child(FirebaseAuth.getInstance().currentUser?.uid.toString()).setValue(storyData).addOnSuccessListener {
+                .child(FirebaseAuth.getInstance().currentUser?.uid.toString()+StoryName).setValue(storyData).addOnSuccessListener {
                     Toast.makeText(this,"Success Saving Story",Toast.LENGTH_SHORT).show()
                 }
         }
