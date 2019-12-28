@@ -12,8 +12,10 @@ class CurrentStoryView : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_current_story_view)
-        var strUser: String = intent.getStringExtra("StoryName")
-        story_name_view.text = strUser
+        var strName: String = intent.getStringExtra("StoryName")
+        var strDesc: String = intent.getStringExtra("StoryDesc")
+        story_name_view.text = strName
+        story_desc_view.text = strDesc
         bindListeners()
     }
 

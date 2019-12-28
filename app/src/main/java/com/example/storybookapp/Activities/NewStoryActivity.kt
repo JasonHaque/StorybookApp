@@ -44,6 +44,7 @@ class NewStoryActivity : AppCompatActivity() {
             }
             val intent = Intent(this,CurrentStoryView::class.java)
             intent.putExtra("StoryName",StoryName)
+            intent.putExtra("StoryDesc",StoryDesc)
             startActivity(intent)
         }
     }
