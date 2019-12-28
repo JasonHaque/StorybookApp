@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.storybookapp.Classes.StoryData
 import com.example.storybookapp.R
+import com.example.storybookapp.Views.CurrentStoryView
 import com.example.storybookapp.Views.HomeView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -24,11 +25,25 @@ class NewStoryActivity : AppCompatActivity() {
         save_story.setOnClickListener {
             val StoryName = Name_of_Story.text.toString()
             val StoryDesc = Story_Description.text.toString()
+            if(StoryName.isEmpty() || StoryDesc.isEmpty()){
+                Toast.makeText(this,"Enter a story please",Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             val storyData =StoryData(FirebaseAuth.getInstance().currentUser?.uid.toString(),StoryName,StoryDesc)
             db.child("Users").child("Stories")
                 .child(FirebaseAuth.getInstance().currentUser?.uid.toString()).setValue(storyData).addOnSuccessListener {
                     Toast.makeText(this,"Success Saving Story",Toast.LENGTH_SHORT).show()
                 }
+        }
+        view_current_story.setOnClickListener {
+            val StoryName = Name_of_Story.text.toString()
+            val StoryDesc = Story_Description.text.toString()
+            if(StoryName.isEmpty() || StoryDesc.isEmpty()){
+                Toast.makeText(this,"Enter a story please",Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            val intent = Intent(this,CurrentStoryView::class.java)
+            startActivity(intent)
         }
     }
     override fun onBackPressed() {
