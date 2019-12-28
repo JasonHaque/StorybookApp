@@ -29,6 +29,14 @@
         android:text="@string/save"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/view_current_story"
+        android:text="@string/view_story"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"/>
 
 
