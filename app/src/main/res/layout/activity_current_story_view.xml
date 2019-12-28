@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <Button
-        android:id="@+id/got_back_to_new_Story"
+        android:id="@+id/go_back_to_new_Story"
         android:text="Go back to editing"
         android:layout_gravity="center"
         android:layout_width="wrap_content"

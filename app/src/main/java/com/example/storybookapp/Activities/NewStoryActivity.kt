@@ -43,6 +43,7 @@ class NewStoryActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             val intent = Intent(this,CurrentStoryView::class.java)
+            intent.putExtra("StoryName",StoryName)
             startActivity(intent)
         }
     }
