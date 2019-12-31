@@ -43,17 +43,17 @@ class ProfileFragment : Fragment() {
         profile_view.text= FirebaseAuth.getInstance().currentUser?.email.toString()
         log_out_button.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
-            Toast.makeText(this,"Logging out", Toast.LENGTH_SHORT).show()
-            val intent= Intent(this, LogInActivity::class.java)
-            ContextCompat.startActivity(intent)
+            Toast.makeText(activity?.applicationContext,"Logging out", Toast.LENGTH_SHORT).show()
+            val intent= Intent(activity?.applicationContext, LogInActivity::class.java)
+            startActivity(intent)
         }
     }
-    override fun Fragment.onBackPressed() {
+   /* override fun Fragment.onBackPressed() {
         super.onBackPressed()
-        val intent = Intent(this@ProfileFragment, HomeView::class.java)
+        val intent = Intent(activity?.applicationContext, HomeView::class.java)
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        ContextCompat.startActivity(intent)
+        startActivity(intent)
 
-    }
+    } */
 
 }
