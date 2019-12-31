@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.example.storybookapp.Activities.R
+//import com.example.storybookapp.Activities.R
 import com.example.storybookapp.R
 
 class SendFragment : Fragment() {
