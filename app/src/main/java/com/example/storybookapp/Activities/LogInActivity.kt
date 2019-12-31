@@ -67,13 +67,13 @@ class LogInActivity : AppCompatActivity() {
                 .dropLastWhile { it.isEmpty() }
                 .toTypedArray()
              userID = ID[0]
-            startActivity(Intent(this@LogInActivity, HomeView::class.java))
+            startActivity(Intent(this@LogInActivity, OpeningActivity::class.java))
         }
     }
     private fun logIn(email:String,password:String){
         firebaseAuth.signInWithEmailAndPassword(email,password).addOnSuccessListener {
             Toast.makeText(this,"Success",Toast.LENGTH_LONG).show()
-            val intent=Intent(this,HomeView::class.java)
+            val intent=Intent(this, OpeningActivity::class.java)
             startActivity(intent)
             return@addOnSuccessListener
         }.addOnFailureListener{

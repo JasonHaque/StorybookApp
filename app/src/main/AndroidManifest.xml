@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Views.CurrentStoryView"></activity>
+        <activity
+            android:name=".Activities.OpeningActivity"
+            android:label="@string/title_activity_opening"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Views.CurrentStoryView" />
         <activity android:name=".Activities.CurrentStoriesActivity" />
         <activity android:name=".Activities.NewStoryActivity" />
         <activity android:name=".Views.HomeView" />
