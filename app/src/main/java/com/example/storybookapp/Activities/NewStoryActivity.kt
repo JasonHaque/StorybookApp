@@ -50,7 +50,7 @@ class NewStoryActivity : AppCompatActivity() {
     }
     override fun onBackPressed() {
         super.onBackPressed()
-        val intent = Intent(this@NewStoryActivity, HomeView::class.java)
+        val intent = Intent(this@NewStoryActivity, OpeningActivity::class.java)
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
         finish()
