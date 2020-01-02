@@ -28,6 +28,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
-        app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+        app:srcCompat="@drawable/plus"
+        app:fabSize="normal"
+        app:fabCustomSize="64dp"
+        app:maxImageSize="50dp"
+        android:scaleType="center"
+        app:rippleColor="@android:color/white"
+        app:borderWidth="0dp"
+        app:backgroundTint="#40FFFFFF"
+        app:elevation="0dp"
+        app:pressedTranslationZ="0dp"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
