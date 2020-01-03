@@ -23,6 +23,26 @@
     <include layout="@layout/content_opening" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginEnd="28dp"
+        app:srcCompat="@drawable/ic_edit_black_24dp"
+        app:fabSize="normal"
+        app:fabCustomSize="50dp"
+        app:maxImageSize="32dp"
+        android:scaleType="center"
+        app:rippleColor="#006622"
+        app:borderWidth="0dp"
+        app:backgroundTint="#006622"
+        android:visibility="invisible"
+        app:elevation="0dp"
+        app:pressedTranslationZ="0dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

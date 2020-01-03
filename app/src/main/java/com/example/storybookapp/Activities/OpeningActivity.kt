@@ -14,9 +14,13 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import com.example.storybookapp.R
 
 class OpeningActivity : AppCompatActivity() {
+
+    var isOpen = false
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 
@@ -26,10 +30,32 @@ class OpeningActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
+        val fabOpen = AnimationUtils.loadAnimation(this, R.anim.fab_open)
+        val fabClose = AnimationUtils.loadAnimation(this, R.anim.fab_close)
+        val fabRClockwise = AnimationUtils.loadAnimation(this, R.anim.rotate_clockwise)
+        val fabRAnticlockwise = AnimationUtils.loadAnimation(this, R.anim.rotate_anticlockwise)
+
         val fab: FloatingActionButton = findViewById(R.id.fab)
+        val fab1: FloatingActionButton = findViewById(R.id.fab1)
         fab.setOnClickListener {
-            val intent= Intent(this,NewStoryActivity::class.java)
-            startActivity(intent)
+            if(isOpen) {
+                fab1.startAnimation(fabClose)
+                fab.startAnimation(fabRClockwise)
+
+                isOpen = false
+            }
+            else{
+                fab1.startAnimation(fabOpen)
+                fab.startAnimation(fabRAnticlockwise)
+
+                fab1.isClickable
+
+                isOpen = true
+            }
+            fab1.setOnClickListener{
+                val intent= Intent(this,NewStoryActivity::class.java)
+                startActivity(intent)
+            }
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
