@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="com.example.storybookapp.Activities.ui.send.SendFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
+        android:name="com.example.storybookapp.Activities.ui.logout.LogoutFragment"
+        android:label="Logout"
+        tools:layout="@layout/logout_fragment" />
 </navigation>
