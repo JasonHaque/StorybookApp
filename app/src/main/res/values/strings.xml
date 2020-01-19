@@ -30,4 +30,6 @@
     <string name="profile">Profile</string>
     <string name="log_ut">Log-out</string>
     <string name="account_info">Account Info</string>
+    <string name="my_stories">My Stories</string>
+    <string name="following">Following</string>
 </resources>
