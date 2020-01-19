@@ -86,9 +86,15 @@
     <Button
         android:id="@+id/sign_up_button"
         android:layout_gravity="center"
+        android:textAllCaps="false"
         android:text="@string/sign_up"
-        android:textSize="22sp"
-        android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textColor="#f2f2f2"
+        android:background="#0066cc"
+        android:fontFamily="@font/ribeyemarrowregular"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
 </LinearLayout>

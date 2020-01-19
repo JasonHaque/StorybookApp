@@ -79,7 +79,9 @@
     <TextView
         android:text="New here ? Do a quick sign Up"
         android:layout_width="wrap_content"
+        android:textColor="#000000"
         android:textSize="22sp"
+        android:fontFamily="@font/acmeregular"
         android:layout_gravity="center"
         android:layout_marginBottom="16dp"
         android:layout_height="wrap_content"/>
