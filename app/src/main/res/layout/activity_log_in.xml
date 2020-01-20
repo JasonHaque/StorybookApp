@@ -28,7 +28,7 @@
         <EditText
             android:id="@+id/log_in_mail"
             android:hint="@string/email_address"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:textColor="#ccffeb"
             android:backgroundTint="#f2f2f2"
             android:textCursorDrawable="@null"
@@ -49,9 +49,8 @@
         <EditText
             android:id="@+id/log_in_password"
             android:hint="@string/password"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:textColor="#ccffeb"
-            android:textStyle="bold"
             android:backgroundTint="#f2f2f2"
             android:textCursorDrawable="@null"
             android:inputType="textPassword"
@@ -75,9 +74,9 @@
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:text="New here ? Do a quick sign Up"
+        android:text="New user ?"
         android:layout_width="wrap_content"
-        android:textColor="#000000"
+        android:textColor="#ccffeb"
         android:textSize="22sp"
         android:fontFamily="@font/acmeregular"
         android:layout_gravity="center"
