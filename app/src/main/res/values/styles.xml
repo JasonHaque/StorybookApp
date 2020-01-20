@@ -9,10 +9,10 @@
     </style>
 
     <style name="Customedittext" parent="TextAppearance.AppCompat">
-        <item name="android:textColorHint">#993333</item>
-        <item name="android:colorAccent">#993333</item>
-        <item name="android:colorControlActivated">#993333</item>
-        <item name="android:colorControlNormal">#993333</item>
+        <item name="android:textColorHint">#60c39a</item>
+        <item name="android:colorAccent">#999966</item>
+        <item name="android:colorControlActivated">#999966</item>
+        <item name="android:colorControlNormal">#f2f2f2</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
