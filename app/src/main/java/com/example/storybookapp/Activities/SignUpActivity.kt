@@ -65,6 +65,11 @@ class SignUpActivity : AppCompatActivity() {
             signUp(email,password)
         }
 
+        backlogin_button.setOnClickListener{
+            val intent = Intent(this@SignUpActivity, LogInActivity::class.java)
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
+        }
 
     }
     private fun signUp(email:String,password:String){

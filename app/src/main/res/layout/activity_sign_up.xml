@@ -91,6 +91,19 @@
         android:padding="10dp"
         android:textColor="#00ff80"
         android:background="@drawable/rounded_button"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/backlogin_button"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:text="Back to Login"
+        android:textSize="17sp"
+        android:padding="10dp"
+        android:textColor="#ffcc99"
+        android:background="@drawable/rounded_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
