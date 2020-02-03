@@ -27,7 +27,11 @@
             android:id="@+id/log_out_button"
             android:text="@string/log_out"
             android:textAllCaps="false"
-            android:layout_width="wrap_content"
+            android:textSize="17sp"
+            android:padding="10dp"
+            android:textColor="#330033"
+            android:background="@drawable/prof_button"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>
 
