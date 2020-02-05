@@ -1,5 +1,6 @@
 package com.example.storybookapp.Classes
 
-class UserData {
-    //TODO: implement database schema
-}
+data class UserData(
+    val Name : String="",
+    val uid : String =""
+)

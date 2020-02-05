@@ -6,13 +6,16 @@ import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
 import android.widget.Toast
+import com.example.storybookapp.Classes.UserData
 import com.example.storybookapp.R
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_log_in.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
     val firebaseAuth:FirebaseAuth= FirebaseAuth.getInstance()
+    val firedb = FirebaseDatabase.getInstance().reference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
@@ -74,7 +77,7 @@ class SignUpActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            signUp(email,password)
+            signUp(email,password,fullname)
         }
 
         backlogin_button.setOnClickListener{
@@ -84,9 +87,11 @@ class SignUpActivity : AppCompatActivity() {
         }
 
     }
-    private fun signUp(email:String,password:String){
+    private fun signUp(email:String,password:String,name : String){
         firebaseAuth.createUserWithEmailAndPassword(email,password).addOnSuccessListener {
             Toast.makeText(this,"Success",Toast.LENGTH_LONG).show()
+            var userdata :UserData = UserData(name,FirebaseAuth.getInstance().currentUser?.uid.toString())
+            firedb.child("UserData").child(FirebaseAuth.getInstance().currentUser?.uid.toString()).setValue(userdata)
             return@addOnSuccessListener
         }.addOnFailureListener{
             Toast.makeText(this, "Failed Signing in $it",Toast.LENGTH_SHORT).show()
