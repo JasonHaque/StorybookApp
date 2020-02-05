@@ -14,13 +14,21 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import android.widget.HeaderViewListAdapter
+import android.widget.TextView
 import com.example.storybookapp.R
+import com.google.firebase.auth.FirebaseAuth
+import com.squareup.okhttp.internal.framed.Header
+import kotlinx.android.synthetic.main.nav_header_opening.*
+import kotlinx.android.synthetic.main.profile_fragment.*
 
 class OpeningActivity : AppCompatActivity() {
 
     var isOpen = false
+
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 
@@ -60,8 +68,10 @@ class OpeningActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+        val view:View = navView.getHeaderView(0)
+        var emailview = view.findViewById<TextView>(R.id.email)
+        emailview.text= FirebaseAuth.getInstance().currentUser?.email.toString()
+
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
