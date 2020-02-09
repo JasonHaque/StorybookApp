@@ -33,4 +33,5 @@
     <string name="my_stories">My Stories</string>
     <string name="following">Following</string>
     <string name="full_name">Full name</string>
+    <string name="storybook">Storybook</string>
 </resources>
