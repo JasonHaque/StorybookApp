@@ -10,6 +10,25 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="20dp">
+        <ImageView
+            android:id="@+id/profimage"
+            android:layout_width="170dp"
+            android:layout_marginTop="30dp"
+            android:layout_height="170dp"
+            android:src="@drawable/profile"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/upload_button"
+            android:text="@string/upload"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            android:padding="10dp"
+            android:textColor="#330033"
+            android:background="@drawable/prof_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         <TextView
             android:text="Welcome user,"
             android:layout_width="wrap_content"

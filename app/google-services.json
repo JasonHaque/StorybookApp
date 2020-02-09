@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "890370395546-vt4mlu85n1922gf5flb1ko9l09eii34n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.storybookapp",
+            "certificate_hash": "7f5c67a821bbeace38da6b0092d32bab5b031512"
+          }
+        },
+        {
           "client_id": "890370395546-ftb3qivbbj5ff3abiqjtkfc1h349tske.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
